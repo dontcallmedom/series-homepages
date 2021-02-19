@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{page.title}} Specification - W3C</title>
+<link rel="Help" href="http://www.w3.org/Help/" />
+<link rel="stylesheet" href="https://www.w3.org/2008/site/css/minimum" type="text/css" media="handheld, all" />
+<style type="text/css" media="print, screen and (min-width: 481px)">
+/*<![CDATA[*/
+@import url("https://www.w3.org/2008/site/css/advanced");
+/*]]>*/
+</style>
+
+<style>
+  span.implstatus { display: inline-block; width: 9em;}
+  p.mdn::before { display: inline-block; width: 3em; content: "MDN"; background-color: black; color: white; font-weight: bold; padding: 0 0.2em; margin-right: 1em;}
+  
+  /* From https://w3c.github.io/web-roadmaps/assets/css/theme.css
+  /************************************************************
+Styles for the "current implementations" column
+************************************************************/
+.ua {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 2px;
+}
+
+.ua:hover {
+    border-bottom: none;
+}
+
+.ua abbr {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+/* Hide text visually but not to accessible tools */
+.ua span {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.ua i {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Stack badges on the right on top of one another */
+.ua i:nth-child(n+3) {
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+}
+
+.ua i:nth-child(3) {
+    bottom: -5px;
+    z-index: 4;
+}
+
+.ua i:nth-child(4) {
+    bottom: 10px;
+    z-index: 3;
+}
+
+.ua i:nth-child(5) {
+    bottom: 25px;
+    z-index: 2;
+}
+
+/* Browser icons */
+.ua .baidu { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/baidu.png'); }
+.ua .chrome { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/chrome.png'); }
+.ua .edge { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/edge.png'); }
+.ua .firefox { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/firefox.png'); }
+.ua .opera { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/opera.png'); }
+.ua .qq { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/qq.png'); }
+.ua .safari { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/safari.png'); }
+.ua .samsunginternet { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/samsunginternet.png'); }
+.ua .uc { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/uc.png'); }
+.ua .webkit { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/webkit.png'); }
+
+/* Desktop/Mobile badges */
+.ua .desktop { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/desktop.svg'); }
+.ua .mobile { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/mobile.svg'); }
+.ua .desktop.mobile { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/desktop-mobile.svg'); }
+
+/* Prefix required and behind a flag badges */
+.ua .prefix { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/prefix.svg'); }
+.ua .flag { background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/flag.svg'); }
+
+/* Implementation may be partial */
+.ua .partial {
+  background-image: url('https://w3c.github.io/web-roadmaps/assets/impl/partial.svg');
+  background-size: 31px 20px !important;
+  bottom: -5px !important;
+  width: 31px !important;
+  right: 9px !important;
+  z-index: 1 !important;
+}
+
+  </style>
+<link href="https://www.w3.org/2008/site/css/minimum" rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" />
+<link rel="stylesheet" href="https://www.w3.org/2008/site/css/print" type="text/css" media="print" />
+<link rel="shortcut icon" href="https://www.w3.org/2008/site/images/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<style>
+ol, ul {
+  padding: 0 40px
+}
+ol > li {
+    list-style: inherit;
+}
+.hide {display:none;}
+
+.history {
+  padding: 0 40px;
+}
+</style>
+</head>
+<body id="www-w3-org" class="w3c_public">
+<div id="w3c_container">
+    <div id="w3c_mast">
+<h1 class="logo"><a tabindex="2" accesskey="1" href="/"><img src="https://www.w3.org/2008/site/images/logo-w3c-mobile-lg" width="90" height="53" alt="W3C" /></a> <span class="alt-logo">W3C</span></h1>
+<div id="w3c_nav">
+<form action="//www.w3.org/Help/search" method="get" enctype="application/x-www-form-urlencoded">
+<!-- w3c_sec_nav is populated through js -->
+<div class="w3c_sec_nav"><!-- --></div>
+<ul class="main_nav"><!-- Main navigation menu -->
+<li class="first-item"><a href="/standards/">Standards</a></li>
+<li><a href="http://www.w3.org/participate/">Participate</a></li>
+<li><a href="http://www.w3.org/Consortium/membership">Membership</a></li>
+<li class="last-item"><a href="http://www.w3.org/Consortium/">About W3C</a></li>
+<li class="search-item">
+<div id="search-form"><input tabindex="3" class="text" name="q" value="" title="Search" /> <button id="search-submit" name="search-submit" type="submit"><img class="submit" src="https://www.w3.org/2008/site/images/search-button" alt="Search" width="21" height="17" /></button></div>
+</li>
+</ul>
+</form>
+</div>
+</div>
+<!-- /end #w3c_mast -->
+<p  style="border: solid black 1px; padding:0.5em; background: red; text-align:center;"><strong>This is a mockup</strong></p>
+    <div id="w3c_main">
+        <div id="w3c_logo_shadow" class="w3c_leftCol">
+            <img height="32" alt="" src="https://www.w3.org/2008/site/images/logo-shadow" />
+        </div>
+<div class="w3c_leftCol"><h2 class="offscreen">Site Navigation</h2>
+    <h3 class="category"><span class="ribbon">{{page.title}}</span></h3>
+       <ul class="theme">
+        <li><a href="history-{{page.shortname}}.html">Publication History</a></li>
+        <li><a href="ipr-{{page.shortname}}.html">Intellectual Property Rights (IPR) status</a></li>
+       </ul>
+       <br /></div>
+        <div class="w3c_mainCol">
+<div id="w3c_crumbs">
+       <div id="w3c_crumbs_frame">
+        <ul class="bct"> <!-- .bct / Breadcrumbs -->
+          <li class="skip"><a tabindex="1" accesskey="2" title="Skip to content (e.g., when browsing via audio)" href="#w3c_content_body">Skip</a></li>
+          <li><a href="/">W3C</a>&#xA0;<span class="cr">&#xBB;</span>&#xA0;</li>
+          <li><a href="/standards/">Standards</a>&#xA0;<span class="cr">&#xBB;</span>&#xA0;</li>
+          <li><a href="/TR/">All&#xA0;Standards&#xA0;and&#xA0;Drafts</a>&#xA0;<span class="cr">&#xBB;</span>&#xA0;</li>
+          <li class="current">{{page.title}}</li>
+        </ul>
+     </div>
+    </div>
+    <h1 class="title"><img style="float:none; vertical-align: middle" src="{{page.logo.url}}" alt="{{page.logo.alt}}" height="40"> {{page.title}} specification</h1>
+      <div id="w3c_content_body">
+        {{content}}
+        {% if page.family %}
+        <p>See also {{{page.family }}}.</p>
+        {% endif %}
+
+    <h2>Specification status</h2>
+    <p>WebXR Device API is a <a href="{{page.latestVersion.url}}">{{page.latestVersion.status}} (last published on {{page.latestVersion.date}})</a> - {{page.nextStage}}.</p>
+        <p>This {{page.doctype}} is developed by the {{{page.groups}}}
+          {% if page.ED %}
+          - see the latest updates under consideration by the group in its <a href="{{page.ED}}">Editor's draft</a>
+          {% endif %}.</p>
+
+        {% if page.implementable %}
+        <h2>Use it!</h2>
+        {% if page.mdn %}
+        <p class=mdn><a href="{{page.mdn}}">{{page.title}} on MDN</a></p>
+        {% endif %}
+        <!-- As generated in Mobile Roadmap https://w3c.github.io/web-roadmaps/mobile/lifecycle.html -->
+        {% if page.roadmap %}
+        <div>
+          <p><span class=implstatus>Shipped:</span> {% for browser in page.roadmap.shipped %} <a class="ua" href="{{browser.source.url}}" style="display: inline-block;"><abbr title="Shipped in {{browser.name}}. Source: {{browser.source.title}}."><span>Shipped in {{browser.name}}. Source: {{browser.source.title}}.</span><i class="{{browser.class}}"></i><i class="{% for p in  browser.platforms %}{{p}} {% endfor %}"></i></abbr></a>{% endfor %}</p>
+          <p><span class=implstatus>In development:</span> {% for browser in page.roadmap.development %} <a class="ua" href="{{browser.source.url}}" style="display: inline-block;"><abbr title="Shipped in {{browser.name}}. Source: {{browser.source.title}}."><span>In development in {{browser.name}}. Source: {{browser.source.title}}.</span><i class="{{browser.class}}"></i><i class="{% for p in  browser.platforms %}{{p}} {% endfor %}"></i></abbr></a>{% endfor %}</p>
+          {% endif %}
+          {% if page.videos %}
+    <p>🎥 Learn more with our videos:</p>
+    <iframe width="560" height="315" src="{{page.videos.url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {% endif %}
+    {% if page.translations %}
+          <p>Read it in your language:</p>
+          <ul>
+          {% for translation in page.translations %}
+          <li>{{translation.title}} - {{translation.lang}} ({{translation.langEN}})</li>
+          {% endfor %}
+          </ul>
+    {% endif %}
+    {% endif %}
+    {% if page.contributable %}
+          <h2>Contribute!</h2>
+          {% if page.feedback %}
+          <p>💬 If you have feedback on this {{page.doctype}}, please discuss it on its {{<a href="{{page.feedback.url}}">{{page.feedback.title}}</a>.</p>
+          {% endif %}
+          {% if page.tests %}
+          <p>🛠️To help ensure broad interoperability of implementations, you can contribute to its <a href="{{page.tests.url}}">test suite</a>{% if page.tests.wpt %} as part of the <a href="https://github.com/web-platform-tests/wpt">Web Platform Tests project</a> {% endif %}.</p>
+          {% endif %}
+          {% if page.translatable %}
+          <p>🌐 To help more people from your community read and adopt the specification, you can <a href="https://www.w3.org/Consortium/Translation/">provide translations of the specification</a>.</p>
+          {% endif %}
+          {% if page.hashtag %}
+          <p>📣 To help promote this specification, we recommend using the {{page.hashtag }} hashtag on social networks.</p>
+          {% endif %}
+          {% if page.logos %}
+          <p><img style="float:none; vertical-align: middle" src="{{page.logo}}" alt="{{page.logoalt}}" height="40"> See also the <a href="{{page.logos.page}}">{{page.logos.qualifier}} logos associated with this specification</a>.</p>
+    {% endif %}
+
+    <h2>Latest version, transitions and patent review drafts for Web App Manifest</h2>
+    <div class="data spec">
+      <table summary="publication history">
+        <tbody>
+          {% for version in  page.history %}
+          <tr>
+            <td class="table_datecol">{{version.date}}</td>
+            <td class="lastColumn">
+              <a title="{{version.date}} {{page.title}}" href="{{version.url}}">
+                {{version.status}}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      &#65121;: <a href="https://www.w3.org/2020/Process-20200915/#patent-review-drafts">Patent review drafts</a>
+   </div>
+  <p>See also the <a href="history-{{page.shortname}}.html">full history of the specification</a></p>
+</div>
+
+ </div>
+        </div> <!-- /end #w3c_mainCol -->
+    </div> <!-- end #w3c_main -->
+</div> <!-- /end #w3c_container -->
+
+<div id="w3c_footer">
+<div id="w3c_footer-inner">
+<h2 class="offscreen">Footer Navigation</h2>
+<div class="w3c_footer-nav">
+<h3>Navigation</h3>
+<ul class="footer_top_nav">
+<li><a href="http://www.w3.org/">Home</a></li>
+<li><a href="http://www.w3.org/standards/">Standards</a></li>
+<li><a href="http://www.w3.org/participate/">Participate</a></li>
+<li><a href="http://www.w3.org/Consortium/membership">Membership</a></li>
+<li class="last-item"><a href="http://www.w3.org/Consortium/">About W3C</a></li>
+</ul>
+</div>
+<div class="w3c_footer-nav">
+<h3>Contact W3C</h3>
+<ul class="footer_bottom_nav">
+<li><a href="http://www.w3.org/Consortium/contact">Contact</a></li>
+<li><a accesskey="0" href="/Help/">Help and FAQ</a></li>
+<li><a href="http://www.w3.org/Consortium/sponsor/">Sponsor / Donate</a></li>
+<li><a href="http://www.w3.org/Consortium/siteindex">Site Map</a></li>
+<li>
+<address id="w3c_signature"><a href="http://lists.w3.org/Archives/Public/site-comments/">Feedback</a></address>
+</li>
+</ul>
+</div>
+<div class="w3c_footer-nav">
+<h3>W3C Updates</h3>
+<ul class="footer_follow_nav">
+<li><a href="http://twitter.com/W3C" title="Follow W3C on Twitter"><img src="https://www.w3.org/2008/site/images/Twitter_bird_logo_2012.svg" alt="Twitter" class="social-icon" height="40" /></a></li>
+</ul>
+</div>
+<!-- #footer address / page signature -->
+<p class="copyright">Copyright © 2020
+W3C <sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics"> ERCIM</abbr></a>, <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>) <a href="/Consortium/Legal/ipr-notice">Usage policies apply</a>.</p>
+</div>
+</div>
+<div id="w3c_scripts"><script type="text/javascript" src="https://www.w3.org/2008/site/js/main"></script></div>
+
+</body>
+</html>
+
